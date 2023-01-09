@@ -13,19 +13,6 @@ Paragraphs contain text and may contain inline markup:
 
 standalone hyperlinks (https://www.python.org),
 
-external hyperlinks (Python_),
-
-internal cross-references (example_),
-
-footnote references ([1]_),
-
-citation references ([CIT2002]_),
-
-substitution references (|example|),
-
-and _`inline internal targets`.
-
-
 ===============
  Section Title
 ===============
@@ -39,28 +26,6 @@ Section Title
 
 Section Title
 -------------
-
-Section Title
-`````````````
-
-Section Title
-'''''''''''''
-
-Section Title
-.............
-
-Section Title
-~~~~~~~~~~~~~
-
-Section Title
-*************
-
-Section Title
-+++++++++++++
-
-Section Title
-^^^^^^^^^^^^^
-
 
 +------------------------------+
 | paragraph                    |
@@ -92,17 +57,213 @@ Section Title
 
 This paragraph is not part of the list.
 
+term 1
+    Definition 1.
 
- 1. hjhjh
-   
-    1. sadasd
-   
-    1. asdasdasd
-   
-    1. adasdasdsa
+term 2
+    Definition 2, paragraph 1.
 
-    a. adasd
+    Definition 2, paragraph 2.
 
-    a. adsadsad
+term 3 : classifier
+    Definition 3.
+
+term 4 : classifier one : classifier two
+    Definition 4.
+
+\-term 5
+    Without escaping, this would be an option list item.
+
+
+Docinfo Example
+===============
+
+:Author: Dipak Prajapati
+:Contact: dipakp@logicrays.com
+:Date: 2023-01-09
+:Status: Work In Progress
+:Version: 1
+:Filename: $RCSfile$
+:Copyright: This document has been placed in the public domain.
+:Version: 1
+:Indentation: Since the field marker may be quite long, the second
+   and subsequent lines of the field body do not have to line up
+   with the first line, but they must be indented relative to the
+   field name marker, and they must line up with each other.
+
+Take it away, Eric the Orchestra Leader!
+
+    | A one, two, a one two three four
+    |
+    | Half a bee, philosophically,
+    |     must, *ipso facto*, half not be.
+    | But half the bee has got to be,
+    |     *vis a vis* its entity.  D'you see?
+    |
+    | But can a bee be said to be
+    |     or not to be an entire bee,
+    |         when half the bee is not a bee,
+    |             due to some ancient injury?
+    |
+    | Singing...
+
+
+This is an ordinary paragraph, introducing a block quote.
+
+    "It is my business to know things.  That is my trade."
+
+    -- Sherlock Holmes
     
-    a. asdasdasd
+Table
+=====
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+
+
+
+Admonitions
+============
+
+.. attention:: This is a attention admonition.
+   This is the second line of the first paragraph.
+
+   - The attention contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+.. caution:: This is a caution admonition.
+   This is the second line of the first paragraph.
+
+   - The caution contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+
+.. danger:: This is a danger admonition.
+   This is the second line of the first paragraph.
+
+   - The danger contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+.. error:: This is a error admonition.
+   This is the second line of the first paragraph.
+
+   - The error contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+
+.. hint:: This is a hint admonition.
+   This is the second line of the first paragraph.
+
+   - The hint contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+.. important:: This is a important admonition.
+   This is the second line of the first paragraph.
+
+   - The important contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+.. note:: This is a note admonition.
+   This is the second line of the first paragraph.
+
+   - The note contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+.. tip:: This is a tip admonition.
+   This is the second line of the first paragraph.
+
+   - The tip contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+
+.. warning:: This is a warning admonition.
+   This is the second line of the first paragraph.
+
+   - The warning contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+
+"To Ma Own Beloved Lassie: A Poem on her 17th Birthday", by
+Ewan McTeagle (for Lassie O'Shea):
+
+    .. line-block::
+
+        Lend us a couple of bob till Thursday.
+        I'm absolutely skint.
+        But I'm expecting a postal order and I can pay you back
+            as soon as it comes.
+        Love, Ewan.
+        
+
+.. code:: python
+
+  def my_function():
+      "just a test"
+      print 8/2
+
+.. code:: json
+
+  {
+  	"Name":"Dipak",
+  	"Age": 27
+  }
+  
+.. code:: php
+
+	<?php
+	declare(strict_types=1);
+
+	namespace Amasty\Mage24Fix\Plugin\Catalog\ViewModel\Product;
+
+	use Magento\Catalog\ViewModel\Product\Breadcrumbs as MagentoBreadcrumbs;
+	use Magento\Framework\App\Config\ScopeConfigInterface;
+	use Magento\Store\Model\ScopeInterface;
+
+	class BreadcrumbsPlugin
+	{
+	    public const XML_PATH_CATEGORY_URL_SUFFIX = 'catalog/seo/category_url_suffix';
+	    public const XML_PATH_PRODUCT_USE_CATEGORIES = 'catalog/seo/product_use_categories';
+
+	    /**
+	     * @var ScopeConfigInterface
+	     */
+	    private $scopeConfig;
+
+	    public function __construct(ScopeConfigInterface $scopeConfig)
+	    {
+	        $this->scopeConfig = $scopeConfig;
+	    }
+	}
+
+
+.. csv-table:: Frozen Delights!
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+
+I recommend you try |Python|_.
+
+.. |Python| replace:: Python, *the* best language around
+.. _Python: https://www.python.org/
