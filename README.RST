@@ -2,6 +2,11 @@
 This is the README.rst file
 ===========================
 
+
+:Type: ``list``
+:Options: ``htmlzip``, ``pdf``, ``epub``, ``all``
+:Default: ``[]``
+
 Paragraphs contain text and may contain inline markup:
 *emphasis*,
 
@@ -37,6 +42,8 @@ Section Title
 |                              |
 +------------------------------+
 
+Lists
+-----
 
 - This is the first bullet list item.  The blank line above the
   first list item is required; blank lines between list items
@@ -56,6 +63,9 @@ Section Title
 - This is the third item of the main list.
 
 This paragraph is not part of the list.
+
+Definition
+-----------
 
 term 1
     Definition 1.
@@ -267,3 +277,123 @@ I recommend you try |Python|_.
 
 .. |Python| replace:: Python, *the* best language around
 .. _Python: https://www.python.org/
+
+
+Tab Example
+----------------
+
+.. tabs::
+
+   .. tab:: Sphinx
+
+      .. code:: yaml
+
+         # Required
+         version: 2
+
+         # Set the version of Python and other tools you might need
+         build:
+           os: ubuntu-22.04
+           tools:
+             python: "3.11"
+
+   .. tab:: MkDocs
+
+      .. code:: yaml
+
+         # Required
+         version: 2
+
+         # Set the version of Python and other tools you might need
+         build:
+           os: ubuntu-22.04
+           tools:
+             python: "3.11"
+
+Dropdown Example
+----------------
+
+.. dropdown:: Easy to use
+    :open:
+
+    Documentation code doesn't have to be written by a programmer.
+
+    Getting started is also made easy:
+
+      * All new to this? Take the official :external+jupyterbook:doc:`Jupyter Book Tutorial <start/your-first-book>`
+      * Curious for practical code? See :doc:`/examples`
+      * Familiar with Sphinx? See :doc:`/guides/jupyter`
+      
+      
+Grid Example:
+=============
+
+.. grid:: 3
+    :gutter: 2
+    :padding: 0
+
+    .. grid-item-card:: Jupyter Project Documentation
+      :img-top: img/logo_jupyter.png
+      :link: https://docs.jupyter.org/
+
+    .. grid-item-card:: Chainladder - Property and Casualty Loss Reserving in Python
+      :img-top: img/logo_chain_ladder.png
+      :link: https://chainladder-python.readthedocs.io/
+
+    .. grid-item-card:: Feature-engine - A Python library for Feature Engineering and Selection
+      :img-top: img/logo_feature_engine.png
+      :link: https://feature-engine.readthedocs.io/en/latest/
+      
+Download file
+--------------
+
+You may use this :download:`PGP key </_static/security/pgpkey.txt>`
+
+
+Tree level titles
+-----------------
+
+Quick summary
+-------------
+
+Features
+--------
+
+
+Redirect types
+--------------
+
+Prefix redirects
+~~~~~~~~~~~~~~~~
+
+
+Page redirects
+~~~~~~~~~~~~~~
+
+Exact redirects
+~~~~~~~~~~~~~~~
+
+Exact redirects examples
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Redirecting a single URL
+````````````````````````
+
+
+**Result**
+
+Quick summary
+
+Features
+
+Redirect types
+
+    Prefix redirects
+
+    Page redirects
+
+    Exact redirects
+
+        Exact redirects examples
+
+            Redirecting a single URL
